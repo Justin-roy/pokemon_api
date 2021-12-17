@@ -4,11 +4,14 @@ A new Flutter project.
 
 #Photo Sample
 
-![1](https://user-images.githubusercontent.com/69432186/146532339-43e2e744-1a5a-4881-b2a4-975e5456c5a2.png)
+![1](https://user-images.githubusercontent.com/69432186/146544830-8a6e9b92-f8aa-4382-94d4-efbdabd2a75e.jpg)
 
-![2](https://user-images.githubusercontent.com/69432186/146532375-0e208e09-08f1-403e-bb92-23fb645495f7.png)
+![2](https://user-images.githubusercontent.com/69432186/146544850-08f48cff-800e-45bf-a2c9-5f8965bf9c18.jpg)
 
 
+#Video Sample
+
+https://user-images.githubusercontent.com/69432186/146545296-51b3f53f-6e36-402e-be22-e05e7101e5d4.mp4
 
 
 
