@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:math';
+import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -84,9 +86,30 @@ class _PokemonApiState extends State<PokemonApi> {
         ? const CircularProgressIndicator()
         : Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.white,
+              elevation: 0.0,
+              leading: const Icon(
+                Icons.keyboard_backspace_outlined,
+                color: Colors.black,
+              ),
               centerTitle: true,
-              backgroundColor: Colors.amber,
-              title: const Text("Pokemon Api"),
+              title: Text(
+                "Pokemon".toUpperCase(),
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              actions: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.menu_outlined,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
             body: SafeArea(
               child: GridView.count(
@@ -95,6 +118,15 @@ class _PokemonApiState extends State<PokemonApi> {
                   // This Loop help to avoid repeted code...
                   for (var i = 0; i < _size; i++) networkImg(i),
                 ],
+              ),
+            ),
+            floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.grey[900],
+              onPressed: () {
+                setState(() {});
+              },
+              child: const Icon(
+                Icons.refresh,
               ),
             ),
           );
@@ -120,6 +152,13 @@ class _PokemonApiState extends State<PokemonApi> {
       },
       child: Card(
         elevation: 3.0,
+        // Generating Random Colors...
+        color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+        ),
         child: Column(
           children: [
             CachedNetworkImage(

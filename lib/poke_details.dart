@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +24,6 @@ class _PokemonDetailsState extends State<PokemonDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0.0,
@@ -34,13 +35,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
           children: [
             Positioned(
               height: MediaQuery.of(context).size.height / 1.5,
-              width: MediaQuery.of(context).size.width - 20,
-              left: 10,
+              width: MediaQuery.of(context).size.width,
               top: MediaQuery.of(context).size.height * 0.1,
               child: Card(
+                color:
+                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
-                    Radius.circular(15),
+                    Radius.elliptical(15, 15),
                   ),
                 ),
                 child: Column(
