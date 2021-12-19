@@ -27,7 +27,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0.0,
-        title: Text(widget._pokename),
+        title: Text(widget._pokename.toUpperCase()),
         backgroundColor: Colors.grey[900],
       ),
       body: SafeArea(
@@ -35,8 +35,9 @@ class _PokemonDetailsState extends State<PokemonDetails> {
           children: [
             Positioned(
               height: MediaQuery.of(context).size.height / 1.5,
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery.of(context).size.width - 20,
               top: MediaQuery.of(context).size.height * 0.1,
+              left: 10,
               child: Card(
                 color:
                     Colors.primaries[Random().nextInt(Colors.primaries.length)],
@@ -54,12 +55,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                         false, "Weight: " + widget._weight, 20, false),
                     descriptionsText(
                         false, "Height: " + widget._height, 20, false),
-                    descriptionsText(false, "Types", 22, false),
+                    descriptionsText(false, "Types".toUpperCase(), 22, false),
                     typeDecriptionsTxt(
                         widget._dynamicType[widget._index].length == 2),
-                    descriptionsText(false, "Weakness", 22, false),
+                    descriptionsText(
+                        false, "Weakness".toUpperCase(), 22, false),
                     weaknessDescText(
-                        widget._dynamicWeakness[widget._index].length),
+                      widget._dynamicWeakness[widget._index].length,
+                    ),
                   ],
                 ),
               ),
@@ -83,10 +86,12 @@ class _PokemonDetailsState extends State<PokemonDetails> {
   }
 
   Widget weaknessDescText(int _size) {
+    // I need to show only Four Weakness...
+    int _reduceSize = _size <= 4 ? _size : 4;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        for (var i = 0; i < _size; i++)
+        for (var i = 0; i < _reduceSize; i++)
           Flexible(
             child: Container(
               height: 35,

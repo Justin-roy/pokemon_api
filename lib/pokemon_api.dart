@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:math';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -62,7 +61,7 @@ class _PokemonApiState extends State<PokemonApi> {
         }
       }
     }
-    print(_apiWeakness);
+    // print(_apiWeakness);
     return "done";
   }
 
