@@ -6,7 +6,8 @@ A new Flutter project.
 
 ![1](https://user-images.githubusercontent.com/69432186/146544830-8a6e9b92-f8aa-4382-94d4-efbdabd2a75e.jpg)
 
-![2](https://user-images.githubusercontent.com/69432186/146544850-08f48cff-800e-45bf-a2c9-5f8965bf9c18.jpg)
+![12](https://user-images.githubusercontent.com/69432186/146666981-6f37f923-29b6-4b63-9a27-d9718c1950aa.jpg)
+
 
 
 #Video Sample
