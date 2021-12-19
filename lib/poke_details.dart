@@ -39,7 +39,10 @@ class _PokemonDetailsState extends State<PokemonDetails> {
               top: MediaQuery.of(context).size.height * 0.1,
               left: 10,
               child: Card(
+                elevation: 15.0,
                 color:
+                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                shadowColor:
                     Colors.primaries[Random().nextInt(Colors.primaries.length)],
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
